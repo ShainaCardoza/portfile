@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Shaina's Portfolio</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaina - Creative Tech</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  animation: {
+                      'float': 'float 6s ease-in-out infinite',
+                  },
+                  keyframes: {
+                      float: {
+                          '0%, 100%': { transform: 'translateY(0)' },
+                          '50%': { transform: 'translateY(-10px)' },
+                      }
+                  }
+              }
+          }
+      }
+  </script>
+
+  <style>
+    .letter {
+      transition: all 0.3s ease;
+    }
+
+    .perspective-[2000px] {
+      perspective: 2000px;
+    }
+
+    .page {
+      backface-visibility: hidden;
+    }
+
+    .page.turned {
+      transform: rotateY(-180deg);
+      z-index: 0 !important;
+    }
+
+    .circle {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid #ec4899;
+    }
+
+    .rectangle {
+      width: 500px;
+      height: 500px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 2px solid #ec4899;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-pink-300 font-sans">
+
+  <!-- Intro Animation -->
+  <div id="intro" class="fixed inset-0 bg-black flex justify-center items-center flex-col transition-all duration-1000 z-50">
+    <div id="name" class="flex space-x-2"></div>
+  </div>
+
+  <!-- Fixed Header -->
+<header id="site-header" class="hidden fixed top-0 left-0 w-full h-24 border-b-[1px] border-pink-500 flex justify-between items-center px-6 z-40 bg-black text-white">
+    <!-- Site Name or Logo -->
+    <div id="header-name" class="text-xl font-bold"></div>
+  
+    <!-- Navigation Bar -->
+    <nav>
+      <ul class="flex space-x-6">
+        <li><a href="#main" class="hover:text-pink-500 transition-colors">Home</a></li>
+        <li><a href="#about" class="hover:text-pink-500 transition-colors">About Me</a></li>
+        <li><a href="#work" class="hover:text-pink-500 transition-colors">My Work</a></li>
+        <li><a href="#skills" class="hover:text-pink-500 transition-colors">My Skills</a></li>
+        <li><a href="#gallery" class="hover:text-pink-500 transition-colors">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-pink-500 transition-colors">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Main Content -->
+  <div id="main" class="opacity-0 transition-opacity duration-1000 p-8 pt-36">
+
+
+  <!-- Sample header to show separation (not part of the hero section) -->
+
+<!-- Hero section with contained styling -->
+<section class="relative overflow-hidden bg-gradient-to-br from-purple-900 via-gray-900 to-black py-16">
+    <!-- Visual container to maintain consistent height -->
+    <div class="container mx-auto max-w-6xl px-4 relative">
+        
+        <!-- 2. Light graphical elements (contained within the section) -->
+        <div class="absolute top-10 left-10 w-20 h-20 rounded-full bg-pink-500 opacity-10 blur-xl"></div>
+        <div class="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-purple-500 opacity-10 blur-xl"></div>
+        <div class="absolute top-1/3 right-1/4 w-16 h-16 rounded-full bg-pink-400 opacity-5 blur-md animate-float"></div>
+        
+        <!-- Geometric shapes -->
+        <div class="absolute top-20 right-1/3 w-32 h-1 bg-pink-500 opacity-20 rotate-45"></div>
+        <div class="absolute bottom-20 left-1/3 w-32 h-1 bg-pink-500 opacity-20 -rotate-45"></div>
+        <div class="absolute top-1/2 left-20 w-6 h-6 border border-pink-500 opacity-20 rotate-12"></div>
+        
+        <!-- Hero content -->
+        <div class="flex flex-col items-center">
+                        
+            <!-- 3. Glow effect behind text -->
+            <div class="relative mb-6">
+                <div class="absolute inset-0 blur-lg bg-pink-600 opacity-20 rounded-full transform scale-110"></div>
+                <h1 class="text-6xl font-bold text-white relative">
+                    Hi, I'm <span class="text-pink-500 underline decoration-2 underline-offset-8">Shaina Cardoza</span>
+                </h1>
+            </div>
+            
+            <p class="text-gray-300 text-xl mb-12 max-w-2xl text-center">
+                Crafting digital ideas, building creative tech, and vibing to innovation.
+            </p>
+            
+            <div class="flex flex-wrap gap-4">
+                <a href="#work" class="bg-pink-500 hover:bg-pink-600 text-black font-bold py-2 px-4 rounded-full shadow-md transition duration-300">Check Out My Work</a>
+                <a href="#contact" class="bg-pink-500 hover:bg-pink-600 text-black font-bold py-2 px-4 rounded-full shadow-md transition duration-300">Get in Touch</a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Welcome Section -->
+    <div class="flex flex-col items-center text-center mb-16">
+      <p class="text-lg text-pink-200 max-w-2xl">Hey there! This is my personal space on the web. Scroll down to learn more about me!</p>
+    </div>
+
+    <!-- About Me Section -->
+<div id="about" class="scroll-mt-20 bg-gradient-to-r from-pink-900 via-purple-900 to-blue-900 p-8 rounded-xl shadow-lg mt-20 flex flex-col md:flex-row items-center gap-8">
+
+  <!-- Profile Image -->
+  <div class="flex-shrink-0">
+    <img src="images/me1.jpeg" alt="Shaina's photo" class="w-48 h-48 object-cover rounded-full border-4 border-pink-500 shadow-lg">
+  </div>
+
+  <!-- About Text -->
+  <div class="text-white">
+    <h2 class="text-4xl text-pink-400 font-semibold mb-4">About Me</h2>
+    <p class="text-lg mb-4">Hi, I'm <span class="font-bold text-pink-300">Shaina</span> — a creative soul with a love for design, tech, and storytelling. I enjoy bringing ideas to life through websites, animations, and beautiful visual experiences. When I'm not coding, you'll probably find me sketching concepts, vibing to some pop music, or planning my next creative project.</p>
+    <p class="text-lg mb-6">I believe in bold ideas, authentic self-expression, and making digital spaces that feel personal and magical.</p>
+
+    <!-- Buttons -->
+    <div class="flex flex-wrap gap-4">
+      <a href="#hobbies" class="bg-pink-500 hover:bg-pink-600 text-black font-bold py-2 px-4 rounded-full shadow-md transition duration-300">Check Out My Hobbies</a>
+    </div>
+  </div>
+
+</div>
+
+
+    <!-- My Work Section -->
+    <div id="work" class="scroll-mt-20 bg-gray-900 p-8 rounded-xl shadow-lg mt-20">
+      <h2 class="text-4xl text-pink-400 font-semibold mb-8 text-center">My Work</h2>
+  
+      <div data-aos="fade-up" data-aos-duration="1000" class="mb-8">
+      <h3 class="text-2xl text-pink-300 font-bold mb-2">Participant in Unplugged by Fr. CRCE: March 2025</h3>
+      <p class="text-pink-100">Built a website that uniquely empowers the elderly to relive and share their life stories through an engaging, supportive platform. Unlike social media, it prioritizes deep storytelling, active listening, and meaningful connections, helping combat loneliness and improve mental well-being.</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <h3 class="text-2xl text-pink-300 font-bold mb-2">Participant in Technova Hackathon by Xavier Institute of Engineering: January 2025  </h3>
+      <p class="text-pink-100">Created a website where users can browse and search for nearby restaurants, view real-time table availability, book tables online and rate and write reviews for restaurants. Additionally, the platform will have an admin dashboard for managing restaurant data.</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="1000" class="mb-8">
+      <h3 class="text-2xl text-pink-300 font-bold mb-2">Participant in Bit N Build by Fr. CRCE: November 2024</h3>
+      <p class="text-pink-100">Designed a Digital Inventory Management System for local store owners, which simplifies stock tracking and prevents overstocking or stockouts.The app featured low-stock alerts, restocking suggestions based on sales trends, and basic sales reporting.  </p>
+      </div>
+    </div>
+
+    <!-- My Skills Section -->
+<div id="skills" class="scroll-mt-20 bg-gray-900 p-8 rounded-xl shadow-lg mt-20">
+  <h2 class="text-4xl text-pink-400 font-semibold mb-8 text-center">My Skills</h2>
+
+  <div class="grid md:grid-cols-2 gap-10">
+
+    <!-- Technical Skills -->
+    <div class="bg-[#1e293b] p-8 rounded-2xl shadow-lg">
+      <h3 class="text-2xl font-bold text-pink-800 mb-6">
+        <span class="mr-2">&#60;/&#62;</span>Technical Skills
+      </h3>
+
+      <div class="space-y-5">
+        <div class="flex justify-between items-center mb-1">
+          <p class="text-pink-100">HTML</p>
+          <p class="text-pink-100 font-bold">80%</p>
+        </div>
+        <div class="w-full bg-gray-700 rounded-full h-4 mb-6">
+          <div class="bg-gradient-to-r from-pink-400 via-orange-500 to-red-600 h-4 rounded-full" style="width: 80%;"></div>
+        </div>
+        
+        <div class="flex justify-between items-center mb-1">
+          <p class="text-pink-100">CSS</p>
+          <p class="text-pink-100 font-bold">80%</p>
+        </div>
+        <div class="w-full bg-gray-700 rounded-full h-4 mb-6">
+          <div class="bg-gradient-to-r from-pink-400 via-orange-500 to-red-600 h-4 rounded-full" style="width: 80%;"></div>
+        </div>
+        
+        <div class="flex justify-between items-center mb-1">
+          <p class="text-pink-100">JavaScript</p>
+          <p class="text-pink-100 font-bold">60%</p>
+        </div>
+        <div class="w-full bg-gray-700 rounded-full h-4 mb-6">
+          <div class="bg-gradient-to-r from-pink-400 via-orange-500 to-red-600 h-4 rounded-full" style="width: 60%;"></div>
+        </div>
+        
+        <div class="flex justify-between items-center mb-1">
+          <p class="text-pink-100">Python</p>
+          <p class="text-pink-100 font-bold">70%</p>
+        </div>
+        <div class="w-full bg-gray-700 rounded-full h-4 mb-6">
+          <div class="bg-gradient-to-r from-pink-400 via-orange-500 to-red-600 h-4 rounded-full" style="width: 70%;"></div>
+        </div>
+        
+        <div class="flex justify-between items-center mb-1">
+          <p class="text-pink-100">C++</p>
+          <p class="text-pink-100 font-bold">75%</p>
+        </div>
+        <div class="w-full bg-gray-700 rounded-full h-4">
+          <div class="bg-gradient-to-r from-pink-400 via-orange-500 to-red-600 h-4 rounded-full" style="width: 75%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="bg-[#1e293b] p-8 rounded-2xl shadow-lg">
+      <h3 class="text-2xl font-bold text-pink-800 mb-6">
+        <svg class="inline-block w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        Soft Skills
+      </h3>
+
+      <div class="flex flex-wrap gap-3">
+        <span class="bg-pink-500 text-black font-medium py-2 px-4 rounded-full">Leadership</span>
+        <span class="bg-pink-500 text-black font-medium py-2 px-4 rounded-full">Attention to Detail</span>
+        <span class="bg-pink-500 text-black font-medium py-2 px-4 rounded-full">Problem Solving</span>
+        <span class="bg-pink-500 text-black font-medium py-2 px-4 rounded-full">Communication</span>
+        <span class="bg-pink-500 text-black font-medium py-2 px-4 rounded-full">Teamwork</span>
+        <span class="bg-pink-500 text-black font-medium py-2 px-4 rounded-full">Multitasking</span>
+        <span class="bg-pink-500 text-black font-medium py-2 px-4 rounded-full">Creativity</span>
+        <span class="bg-pink-500 text-black font-medium py-2 px-4 rounded-full">Adaptability</span>
+        <span class="bg-pink-500 text-black font-medium py-2 px-4 rounded-full">Empathy</span>
+        <span class="bg-pink-500 text-black font-medium py-2 px-4 rounded-full">Critical Thinking</span>
+        <span class="bg-pink-500 text-black font-medium py-2 px-4 rounded-full">Integrity</span>
+        <span class="bg-pink-500 text-black font-medium py-2 px-4 rounded-full">Time Management</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <!-- Gallery Section -->
+    <div id="gallery" class="scroll-mt-20 mt-20">
+      <h2 class="text-4xl text-pink-400 font-semibold mb-8 text-center">My Gallery</h2>
+
+      <!-- Reading Photo -->
+      <div class="mb-12">
+        <img src="images/Reading1.png" alt="Reading" class="w-full h-[400px] object-cover rounded-xl shadow-lg border-2 border-pink-500">
+        <p class="text-pink-200 text-xl mt-4 text-center">Books, words, and stories — my little escape into new worlds</p>
+      </div>
+
+      <!-- Shapes Section -->
+      <div class="flex items-center justify-center space-x-10 mt-10">
+        <!-- Rectangle -->
+        <div data-aos="fade-up" data-aos-duration="1200" class="rectangle">
+          <img src="images/me.jpeg" alt="Rectangle Image" class="w-full h-full object-cover rounded-[20px]">
+        </div>
+
+        <!-- 3 Circles -->
+        <div class="flex flex-col space-y-6">
+          <div data-aos="fade-up" data-aos-delay="300" class="circle">
+            <img src="images/harry.jpeg" alt="Circle 1" class="w-full h-full object-cover rounded-full">
+          </div>
+          <div data-aos="fade-up" data-aos-delay="600" class="circle">
+            <img src="images/little.jpeg" alt="Circle 2" class="w-full h-full object-cover rounded-full">
+          </div>
+          <div data-aos="fade-up" data-aos-delay="900" class="circle">
+            <img src="images/great.jpeg" alt="Circle 3" class="w-full h-full object-cover rounded-full">
+          </div>
+        </div>
+      </div>
+
+      <!-- Travel Photo -->
+      <div class="mb-12 mt-16">
+        <img src="images/travel.png" alt="Travel" class="w-full h-[400px] object-cover rounded-xl shadow-lg border-2 border-pink-500">
+        <p class="text-pink-200 text-xl mt-4 text-center">I haven't been everywhere, but it's on my list</p>
+      </div>
+
+      <!-- Extra Gallery Section -->
+      <div data-aos="fade-up" data-aos-duration="1200" class="grid grid-cols-3 gap-6 mt-16 px-6 max-w-7xl">
+        <!-- First column -->
+        <div class="rounded-[25px] h-60 overflow-hidden">
+            <img src="images/mount.jpg" class="w-full h-full object-cover" alt="Gallery Image">
+        </div>
+        <!-- Second column -->
+        <div class="rounded-[25px] h-60 overflow-hidden">
+            <img src="images/boat.jpeg" class="w-full h-full object-cover" alt="Gallery Image">
+        </div>
+        <!-- Third column (tall one) -->
+        <div class="rounded-[50px] h-[500px] row-span-2 overflow-hidden">
+            <img src="images/ice.jpg" class="w-full h-full object-cover" alt="Gallery Image">
+        </div>
+        <!-- First column (second box) -->
+        <div class="rounded-[25px] h-60 overflow-hidden">
+            <img src="images/house.jpeg" class="w-full h-full object-cover" alt="Gallery Image">
+        </div>
+        <!-- Second column (second box) -->
+        <div class="rounded-[25px] h-60 overflow-hidden">
+            <img src="images/taj.jpg" class="w-full h-full object-cover" alt="Gallery Image">
+        </div>
+      </div>
+      
+      <!-- Travel Photo -->
+      <div class="mb-12 mt-16">
+        <img src="images/sketch2.png" alt="Travel" class="w-full h-[400px] object-cover rounded-xl shadow-lg border-2 border-pink-500">
+        <p class="text-pink-200 text-xl mt-4 text-center">There is no healthier drug than creativity</p>
+      </div>
+      
+      <!-- 3 Equal Tall Cards Section with Animations -->
+      <div class="grid grid-cols-3 gap-6 mt-16 px-6 max-w-7xl mx-auto">
+        <div data-aos="fade-up" data-aos-duration="1000" class="rounded-[25px] h-[500px] overflow-hidden transform transition duration-500 hover:scale-105 shadow-lg">
+          <img src="images/sketching2.jpg" class="w-full h-full object-cover" alt="Gallery Image">
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="rounded-[25px] h-[500px] overflow-hidden bg-pink-400 transform transition duration-500 hover:scale-105 shadow-lg">
+          <img src="images/sketching1.png" class="w-full h-full object-cover" alt="Gallery Image">
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" class="rounded-[25px] h-[500px] overflow-hidden bg-pink-400 transform transition duration-500 hover:scale-105 shadow-lg">
+          <img src="images/sketching3.png" class="w-full h-full object-cover" alt="Gallery Image">
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Contact Section -->
+<div id="contact" class="scroll-mt-20 bg-gray-900 p-8 rounded-xl shadow-lg mt-20">
+  <h2 class="text-4xl text-pink-400 font-semibold mb-8 text-center">Get in Touch</h2>
+
+  <div class="grid md:grid-cols-2 gap-10">
+    <!-- Contact Info -->
+    <div class="bg-[#1e293b] p-8 rounded-2xl shadow-lg">
+      <h3 class="text-2xl font-semibold text-pink-300 mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        Contact Information
+      </h3>
+
+      <div class="space-y-6">
+        <div class="flex items-center">
+          <div class="bg-gray-800 p-3 rounded-full mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-pink-100">Email</p>
+            <p class="text-white font-medium">shaina.cardoza@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="flex items-center">
+          <div class="bg-gray-800 p-3 rounded-full mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-pink-100">Phone</p>
+            <p class="text-white font-medium">+91 9619176506</p>
+          </div>
+        </div>
+
+        <div class="flex items-center">
+          <div class="bg-gray-800 p-3 rounded-full mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-pink-100">Location</p>
+            <p class="text-white font-medium">Mumbai, Maharashtra, India</p>
+          </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="mt-8">
+          <p class="text-pink-100 mb-4">Find me on</p>
+          <div class="flex space-x-4">
+            <!-- GitHub -->
+            <a href="#" class="bg-gray-800 p-3 rounded-full transition-all hover:bg-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="#" class="bg-gray-800 p-3 rounded-full transition-all hover:bg-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="#" class="bg-gray-800 p-3 rounded-full transition-all hover:bg-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="bg-[#1e293b] p-8 rounded-2xl shadow-lg">
+      <h3 class="text-2xl font-semibold text-pink-300 mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+        </svg>
+        Send a Message
+      </h3>
+
+      <form>
+        <div class="mb-4">
+          <label for="name" class="block text-pink-100 mb-1">Name</label>
+          <input type="text" id="name" placeholder="Your name" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+        </div>
+
+        <div class="mb-4">
+          <label for="email" class="block text-pink-100 mb-1">Email</label>
+          <input type="email" id="email" placeholder="Your email" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+        </div>
+
+        <div class="mb-4">
+          <label for="subject" class="block text-pink-100 mb-1">Subject</label>
+          <input type="text" id="subject" placeholder="Subject" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+        </div>
+
+        <div class="mb-6">
+          <label for="message" class="block text-pink-100 mb-1">Message</label>
+          <textarea id="message" placeholder="Your message" rows="5" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all hover:opacity-90 transform hover:scale-[1.02]">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="mt-16 text-center pb-8">
+  <p class="text-pink-200">© 2025 Shaina Cardoza. All rights reserved.</p>
+  <p class="text-pink-300 mt-2">Made with Love and Creativity</p>
+</footer>
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Intro Animation and Header Script -->
+  <script>
+    const name = "SHAINA";
+    const nameContainer = document.getElementById("name");
+    const headerNameContainer = document.getElementById("header-name");
+    const intro = document.getElementById("intro");
+    const main = document.getElementById("main");
+    const siteHeader = document.getElementById("site-header");
+
+    const randomFonts = [
+      "'Arial'", "'Courier New'", "'Georgia'", "'Impact'", "'Lucida Console'",
+      "'Verdana'", "'Times New Roman'", "'Comic Sans MS'", "'Trebuchet MS'",
+      "'Copperplate'", "'Brush Script MT'", "'Berkshire Swash', cursive"
+    ];
+
+    const pinkShades = [
+      "#FFB6C1", "#FF69B4", "#FF1493", "#C71585", "#DB7093", "#F8BBD0", "#FFC0CB"
+    ];
+
+    name.split("").forEach(letter => {
+      const span = document.createElement("span");
+      span.className = "letter text-8xl tracking-widest";
+      span.textContent = letter;
+      nameContainer.appendChild(span);
+    });
+
+    const letters = document.querySelectorAll(".letter");
+
+    function changeFontsAndColors() {
+      letters.forEach(letter => {
+        const randomFont = randomFonts[Math.floor(Math.random() * randomFonts.length)];
+        const randomColor = pinkShades[Math.floor(Math.random() * pinkShades.length)];
+        letter.style.fontFamily = randomFont;
+        letter.style.color = randomColor;
+      });
+    }
+
+    const interval = setInterval(changeFontsAndColors, 300);
+
+    setTimeout(() => {
+      clearInterval(interval);
+      changeFontsAndColors();
+      intro.style.display = "none";
+      siteHeader.classList.remove("hidden");
+
+      name.split("").forEach(letter => {
+        const span = document.createElement("span");
+        const randomFont = randomFonts[Math.floor(Math.random() * randomFonts.length)];
+        const randomColor = pinkShades[Math.floor(Math.random() * pinkShades.length)];
+        span.className = "text-5xl font-bold tracking-widest";
+        span.style.fontFamily = randomFont;
+        span.style.color = randomColor;
+        span.textContent = letter;
+        headerNameContainer.appendChild(span);
+      });
+
+      main.classList.add("opacity-100");
+    }, 4000);
+  </script>
+
+</body>
+
+</html>
