@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const phoneInput = document.getElementById('phone');
     const messageInput = document.getElementById('message');
     const contactListContainer = document.getElementById('contact-list-container');
-    
     const submitBtn = document.getElementById('submit-btn');
 
     // State
@@ -45,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 // Post to local backend
-                const response = await fetch('http://localhost:5001/api/contact', {
+                const response = await fetch('/api/contact', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
