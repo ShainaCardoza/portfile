@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const phoneInput = document.getElementById('phone');
     const messageInput = document.getElementById('message');
     const contactListContainer = document.getElementById('contact-list-container');
+    
     const submitBtn = document.getElementById('submit-btn');
 
     // State
